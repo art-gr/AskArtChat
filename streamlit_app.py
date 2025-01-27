@@ -17,7 +17,7 @@ else:
     # Create OpenAI client with Deepseek base URL
     client = OpenAI(
         api_key=deepseek_api_key,
-        base_url="https://api.deepseek.com/v1"
+        base_url="https://api.deepseek.com/"
     )
 
     # Initialize session state for messages if it doesn't exist
