@@ -17,7 +17,7 @@ else:
     # Create OpenAI client with Deepseek base URL
     client = OpenAI(
         api_key=deepseek_api_key,
-        base_url="https://api.deepseek.com"  # Removed /v1 suffix
+        base_url="https://api.deepseek.com"  
     )
 
     # Initialize session state for messages if it doesn't exist
@@ -39,7 +39,7 @@ else:
         try:
             # Generate response using the OpenAI client
             stream = client.chat.completions.create(
-                model="deepseek-chat",  # Using Deepseek's model
+                model="deepseek-reasoner",  # Using Deepseek's model
                 messages=st.session_state.messages,  # Using just the conversation history
                 stream=True,
             )
